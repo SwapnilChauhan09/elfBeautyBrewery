@@ -63,16 +63,6 @@ In this project, we have made several key design decisions to ensure quality and
 
 ---
 
-## 🛠️ Extending the Project
-
-In this project, we have made it easy to extend functionality:
-- New endpoints can be added by creating new controllers and services.
-- Additional data sources can be supported by implementing new repository classes.
-- Security can be enhanced by extending JWT claims and roles.
-- Performance can be optimized by tuning caching strategies.
-
----
-
 ## 📚 Summary
 
 In summary, this project demonstrates a robust, modular, and secure approach to building a modern .NET API. The design choices support scalability, maintainability, and ease of future enhancements.
@@ -103,7 +93,7 @@ All endpoints are versioned using the path parameter `{apiVersion}` (e.g., `/v1/
            "password": "elf@Admin"
          }'
    ```
-**NOTE - Please use these values for testing "userName": "elfAdmin","password": "elf@Admin"
+**NOTE - Please use these values for testing "userName": "elfAdmin","password": "elf@Admin"**
 
 2. **Copy the token** from the response.
 
@@ -123,6 +113,8 @@ Authenticate a user and receive a JWT token.
 POST /v{apiVersion}/api/Authentication/login
 ```
 
+**NOTE - Please use these values for testing "userName": "elfAdmin","password": "elf@Admin"**
+
 **Path Parameters**  
 | Name        | Type   | Required | Description   |
 |-------------|--------|----------|---------------|
@@ -131,13 +123,13 @@ POST /v{apiVersion}/api/Authentication/login
 **Request Body**  
 ```json
 {
-  "userName": "string",
-  "password": "string"
+  "userName": "elfAdmin",
+  "password": "elf@Admin"
 }
 ```
 
 **Response (200 OK)**  
-Returns a JWT token (format depends on implementation).  
+Returns a JWT token.  
 
 ---
 
@@ -259,6 +251,8 @@ curl -X POST "https://yourdomain.com/v1/api/Authentication/login"   -H "Content-
         "password": "elf@Admin"
       }'
 ```
+
+**NOTE - Please use these values for testing "userName": "elfAdmin","password": "elf@Admin"**
 
 **Get All Breweries:**  
 ```bash

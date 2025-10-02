@@ -99,10 +99,11 @@ All endpoints are versioned using the path parameter `{apiVersion}` (e.g., `/v1/
 1. **Login to get a JWT token**
    ```bash
    curl -X POST "https://yourdomain.com/v1/api/Authentication/login"      -H "Content-Type: application/json"      -d '{
-           "userName": "admin",
-           "password": "password123"
+           "userName": "elfAdmin",
+           "password": "elf@Admin"
          }'
    ```
+**NOTE - Please use these values for testing "userName": "elfAdmin","password": "elf@Admin"
 
 2. **Copy the token** from the response.
 
@@ -254,8 +255,8 @@ POST /v{apiVersion}/api/Brewery/Search
 **Login (Get JWT token):**  
 ```bash
 curl -X POST "https://yourdomain.com/v1/api/Authentication/login"   -H "Content-Type: application/json"   -d '{
-        "userName": "admin",
-        "password": "password123"
+        "userName": "elfAdmin",
+        "password": "elf@Admin"
       }'
 ```
 

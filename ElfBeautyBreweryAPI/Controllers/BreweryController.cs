@@ -28,8 +28,7 @@ namespace elfBeautyBrewery.Api.Host.Controllers
         /// </summary>
         /// <returns>Return Breweries List</returns>
         [HttpGet("GetAll")]
-        [AllowAnonymous]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> GetAll()
         {
             _logger.LogInformation("GetAll called.");
@@ -52,9 +51,7 @@ namespace elfBeautyBrewery.Api.Host.Controllers
         /// <param name="id"></param>
         /// <returns>Return Brewery</returns>
         [HttpGet("Get")]
-        //[Authorize]
-        [AllowAnonymous]
-
+        [Authorize]
         public async Task<IActionResult> Get(Guid id)
         {
             _logger.LogInformation("Get called with Id: {Id}", id);
@@ -77,9 +74,7 @@ namespace elfBeautyBrewery.Api.Host.Controllers
         /// <param name="searchRequest"></param>
         /// <returns>Return Breweries List</returns>
         [HttpPost("Search")]
-        //[Authorize]
-        [AllowAnonymous]
-
+        [Authorize]
         public async Task<IActionResult> Search([FromBody] BreweriesSearchRequest searchRequest)
         {
             _logger.LogInformation("Search called with request: {@SearchRequest}", searchRequest);
